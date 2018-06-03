@@ -1,0 +1,116 @@
+/* SHOWCASE */
+
+.showcase {
+  height: 100vh;
+  background: url("../images/boardwalk-clouds-country-276299.jpg") center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start
+}
+
+.showcase-content {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+.showcase-content p {
+  margin: 25px 0;
+}
+
+.showcase-content a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.showcase-content a:hover {
+  background-color: grey;
+}
+
+/* BELOW FOLD 1 */
+
+.below-fold-1 {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.below-fold-1 h2 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.below-fold-1 h3 {
+  margin: 10px 0;
+}
+
+.below-fold-1 p {
+  letter-spacing: 0.75px;
+}
+
+.below-fold-1 .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.below-fold-1 .card-container p {
+  font-style: italic;
+}
+
+/* BELOW FOLD 2 */
+
+.below-fold-2 {
+  background-color: #62A5C4;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.below-fold-2 h2 {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.below-fold-2 .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.below-fold-2 .card-container img {
+  width: 150px;
+}
+
+.below-fold-2 .card-container .card {
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: white;
+}
+
+.below-fold-2 .card-container h3 {
+  margin: 15px 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  /* BELOW FOLD 1 CARDS */
+  .below-fold-1 .card-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  /* SHOWCASE LINKS */
+  .showcase-content a {
+    width: 100%;
+    text-align: center;
+  }
+}

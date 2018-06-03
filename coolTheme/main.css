@@ -1,0 +1,319 @@
+/*
+Theme Name: coolTheme
+Theme URI: google.com
+Description: Really cool
+Version: 1.0
+Author: Mike Yak
+Author URI: google.com
+*/
+
+
+
+/* FONTS */
+@font-face {
+  font-family: "Avgardm";
+  src: url("../Logo/Logo/Font/Avgardm_0.TTF");
+}
+
+@font-face {
+  font-family: "avgardmi"
+  src: url(../Logo/Logo/Font/avgardmi_0.TTF);
+}
+
+@font-face {
+  font-family: "slogan";
+  src: url(../Logo/Logo/Font/SLOGAN_N_0.TTF);
+}
+
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avgardm";
+}
+
+/* WRAPPER STYLE */
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #eee;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+a.logo {
+  text-decoration: none;
+  color: #444;
+  font-size: 24px;
+}
+
+.logo img {
+  height: 100px;
+  vertical-align: text-bottom;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+}
+
+.main-nav a:hover {
+  color: rgb(180, 220, 86);
+}
+
+.main-nav .active {
+  color: rgb(180, 220, 86);
+}
+
+#hamburger {
+  display: none;
+}
+
+/* SIDE MENU */
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 120px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.menu a#close {
+  text-align: right;
+  font-size: 28px;
+  padding: 2px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 0;
+}
+
+.menu a:hover {
+  background-color: black;
+}
+
+.menu .active {
+  background-color: black;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #444;
+  padding: 50px 0;
+}
+
+.footer-content {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5rem;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+  font-family: "Lucida Console";
+}
+
+.footer-content div {
+  font-family: "Lucida Console";
+  padding: 0 40px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+  }
+  #hamburger {
+    display: inline;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 801px) {
+  /* Hide menu off screen if user expands window while menu open */
+  .menu {
+    right: -100%;
+  }
+}
+
+/* SHOWCASE */
+
+.showcase {
+  height: 90vh;
+  background: url("../Images/rundlle-mist.jpg") center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start
+}
+
+.showcase-content {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+.showcase-content p {
+  margin: 25px 0;
+}
+
+.showcase-content a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: rgb(180, 220, 86);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.showcase-content a:hover {
+  background-color: grey;
+}
+
+/* BELOW FOLD 1 */
+
+.below-fold-1 {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.title {
+  font-family:"slogan";
+  border-bottom: solid 2px rgb(180, 220, 86);
+}
+
+.card img {
+  height: 350px;
+}
+
+.below-fold-1 h1 {
+  margin: 20px 0;
+}
+
+.below-fold-1 h3 {
+  margin: 10px 0;
+}
+
+.below-fold-1 p {
+  letter-spacing: 0.75px;
+}
+
+.below-fold-1 .card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.below-fold-1 .card-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.below-fold-1 .card-container p {
+  font-style: italic;
+}
+
+.card a {
+  text-decoration: none;
+  color: rgb(180, 220, 86);
+}
+
+/* BELOW FOLD 2 */
+
+/*
+.below-fold-2 {
+  background-color: #62A5C4;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.below-fold-2 h2 {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.below-fold-2 .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.below-fold-2 .card-container img {
+  width: 150px;
+}
+
+.below-fold-2 .card-container .card {
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: white;
+}
+
+.below-fold-2 .card-container h3 {
+  margin: 15px 0;
+}
+*/
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  /* BELOW FOLD 1 CARDS */
+  .below-fold-1 .card-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  
+  /* SHOWCASE LINKS */
+  .showcase-content a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+ @media (max-width: 1000px) {
+/* About Us and Image */
+  .below-fold-1 .card-container2 {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+  .card img {
+    height: 150px;
+  }
+}

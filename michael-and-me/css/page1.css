@@ -1,0 +1,39 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  margin: 15px 0;
+}
+
+.card {
+  border: 2px solid grey;
+  border-radius: 10px;
+  box-shadow: 5px 5px grey;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.card p {
+  margin: 15px 0;
+}
+
+.card img {
+  width: 150px;
+}
+
+.card a {
+  margin-top: auto;
+  text-decoration: none;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
